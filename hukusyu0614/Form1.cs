@@ -47,7 +47,20 @@ namespace hukusyu0614
                 vy = -Math.Abs(vy);
             }
 
-            
+            /*
+            Point p = MousePosition;
+            if (label1.Left<=p.X&&label1.Right>=p.X&&label1.Top<=p.Y&&label1.Bottom>=p.Y)
+            {
+                timer1.Enabled = false;
+            }
+            */
+            //自力で何も見ないでここまで
+
+            Point p = PointToClient(MousePosition);
+            if (label1.Left <= p.X && label1.Right >= p.X && label1.Top <= p.Y && label1.Bottom >= p.Y)
+            {
+                timer1.Enabled = false;
+            }
         }
     }
 }
